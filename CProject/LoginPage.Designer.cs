@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbl_uname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_uname = new System.Windows.Forms.TextBox();
             this.tb_pwd = new System.Windows.Forms.TextBox();
             this.cb_utype = new System.Windows.Forms.ComboBox();
-            this.btn_login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_see = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_uname
@@ -81,23 +84,10 @@
             "ADMIN",
             "RECEPTIONIST",
             "DOCTOR"});
-            this.cb_utype.Location = new System.Drawing.Point(12, 49);
+            this.cb_utype.Location = new System.Drawing.Point(12, 77);
             this.cb_utype.Name = "cb_utype";
             this.cb_utype.Size = new System.Drawing.Size(155, 21);
             this.cb_utype.TabIndex = 4;
-            this.cb_utype.Text = "Choose your user type here";
-            // 
-            // btn_login
-            // 
-            this.btn_login.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_login.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_login.Location = new System.Drawing.Point(433, 135);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(58, 23);
-            this.btn_login.TabIndex = 5;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -123,7 +113,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(490, 135);
+            this.pictureBox1.Location = new System.Drawing.Point(536, 147);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,15 +121,28 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Choose your user type here";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 182);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cb_see);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.cb_utype);
             this.Controls.Add(this.tb_pwd);
             this.Controls.Add(this.tb_uname);
@@ -148,6 +151,7 @@
             this.Name = "Form1";
             this.Text = "Login Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,10 +164,11 @@
         private System.Windows.Forms.TextBox tb_uname;
         private System.Windows.Forms.TextBox tb_pwd;
         private System.Windows.Forms.ComboBox cb_utype;
-        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cb_see;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
