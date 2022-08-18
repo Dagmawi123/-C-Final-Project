@@ -171,7 +171,11 @@ namespace CProject
                             if (tb_uname.Text.Equals(reader.GetString(3)))
                             {
                                 t = true;
-                                if (tb_pwd.Text.Equals(reader.GetString(4).ToString())) { MessageBox.Show("Succesfully logged!!"); }
+                                if (tb_pwd.Text.Equals(reader.GetString(4).ToString())) { MessageBox.Show("Succesfully logged!!");
+                                    this.Hide();
+                                    DoctorHomePage d = new DoctorHomePage(tb_uname.Text);
+                                    d.Show();
+                                }
                                 else
                                 {
                                     MessageBox.Show("Incorrect password");
