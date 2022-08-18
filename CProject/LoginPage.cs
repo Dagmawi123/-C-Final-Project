@@ -206,6 +206,11 @@ namespace CProject
 
 
         }
+
+        private void cb_utype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     
