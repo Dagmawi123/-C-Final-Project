@@ -144,7 +144,7 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Choose your user type here";
             // 
-            // Form1
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +160,7 @@
             this.Controls.Add(this.tb_uname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_uname);
-            this.Name = "Form1";
+            this.Name = "LoginPage";
             this.Text = "Login Page";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

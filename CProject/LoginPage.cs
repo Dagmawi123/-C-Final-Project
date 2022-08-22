@@ -20,22 +20,25 @@ namespace CProject
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_see.Checked) {
+            if (cb_see.Checked)
+            {
                 tb_pwd.PasswordChar = (char)0;
             }
             else
                 tb_pwd.PasswordChar = '@';
         }
-        
-        private void pictureBox1_Click(object sender, EventArgs e) { 
-            if (String.IsNullOrEmpty(tb_uname.Text)) {
-              errorProvider1.SetError(tb_uname, "PLEASE ENTER YOUR USER NAME!!");
-                errorProvider1 .BlinkRate= 2;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(tb_uname.Text))
+            {
+                errorProvider1.SetError(tb_uname, "PLEASE ENTER YOUR USER NAME!!");
+                errorProvider1.BlinkRate = 2;
                 return;
             }
             else if (String.IsNullOrEmpty(tb_pwd.Text))
@@ -61,7 +64,7 @@ namespace CProject
             //}
             try
             {
-                
+
                 if (cb_utype.SelectedItem.ToString().Equals("ADMIN"))
                 {
                     sql = " Select * from Admin";
@@ -118,7 +121,9 @@ namespace CProject
                         cmd = new SqlCommand(sql, cnn);
                         reader = cmd.ExecuteReader();
                         MessageBox.Show("Connected!");
-                        if (!reader.Read()) { MessageBox.Show("There is no receptionist saved in the database");
+                        if (!reader.Read())
+                        {
+                            MessageBox.Show("There is no receptionist saved in the database");
                             return;
                         }
                         while (reader.Read())
@@ -171,10 +176,14 @@ namespace CProject
                             if (tb_uname.Text.Equals(reader.GetString(3)))
                             {
                                 t = true;
-                                if (tb_pwd.Text.Equals(reader.GetString(4).ToString())) { MessageBox.Show("Succesfully logged!!");
+                                if (tb_pwd.Text.Equals(reader.GetString(4).ToString()))
+                                {
+                                    MessageBox.Show("Succesfully logged!!");
                                     this.Hide();
-                                    DoctorHomePage d = new DoctorHomePage(tb_uname.Text);
+                                    //Form f = LoginPage.ActiveForm;
+                                    DoctorHomePage d = new DoctorHomePage(tb_uname.Text, this);
                                     d.Show();
+                                    //f.Close();
                                 }
                                 else
                                 {
@@ -206,7 +215,7 @@ namespace CProject
             {
                 MessageBox.Show("Please Select appropriate user type");
             }
-      
+
 
 
         }
@@ -220,6 +229,31 @@ namespace CProject
         {
 
         }
+
+      /*  private void lbl_add_Click(object sender, EventArgs e)
+        {
+         try
+            {
+                int x = 0;
+                String query = "exec AddAdmin " + tb_uname.Text + " ," + tb_pwd.Text;
+                String connectionString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Integrated security=true;";
+                SqlConnection cnn = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                cnn.Open();
+                x = (int)cmd.ExecuteNonQuery();
+                if (x > 0) { MessageBox.Show("Admin Inserted Sucessfully"); }
+                else { MessageBox.Show("unable to insert Admin"); }
+                cnn.Close();
+            }
+            catch (SqlException s)
+            {
+                MessageBox.Show("ConnectionError");
+
+
+            }
+            
+        } 
+    */
     }
     }
     

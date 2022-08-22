@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Check Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check Appointment.Designer.cs">
+      <DependentUpon>Check Appointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WritePatientHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WritePatientHistory.Designer.cs">
+      <DependentUpon>WritePatientHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WritePrescriptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WritePrescriptionPage.Designer.cs">
+      <DependentUpon>WritePrescriptionPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Check Appointment.resx">
+      <DependentUpon>Check Appointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorHomePage.resx">
       <DependentUpon>DoctorHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +96,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WritePatientHistory.resx">
+      <DependentUpon>WritePatientHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WritePrescriptionPage.resx">
+      <DependentUpon>WritePrescriptionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
