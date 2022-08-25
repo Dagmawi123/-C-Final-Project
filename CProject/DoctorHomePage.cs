@@ -52,6 +52,8 @@ namespace CProject
 
         private void newPrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+                this.ActiveMdiChild.Close();
             WritePrescriptionPage w = new WritePrescriptionPage();
             //this.ActivateMdiChild(w);
             lbl_wlcome.Dispose();
@@ -62,6 +64,9 @@ namespace CProject
 
         private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (this.ActiveMdiChild != null)
+                this.ActiveMdiChild.Close();
+
             lbl_wlcome.Dispose();
             WritePatientHistory ww = new WritePatientHistory();
             ww.MdiParent = this;
@@ -89,6 +94,9 @@ namespace CProject
 
         private void writeAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(this.ActiveMdiChild!=null)
+            this.ActiveMdiChild.Close();
+
             Check_Appointment c = new Check_Appointment(lbl_doc.Text);
             c.MdiParent = this;
             lbl_wlcome.Dispose();
