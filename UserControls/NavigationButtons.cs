@@ -14,7 +14,9 @@ namespace CProject
 {
     public partial class NavigationButtons : UserControl
     {
-        
+
+      
+
         public NavigationButtons()
         {
             InitializeComponent();
@@ -57,12 +59,23 @@ namespace CProject
 
         private void maximize_btn_MouseHover(object sender, EventArgs e)
         {
-            maximize_btn.ZoomOut(); 
+            minimize_btn.ZoomOut(); 
         }
 
         private void maximize_btn_MouseLeave(object sender, EventArgs e)
         {
-            maximize_btn.ZoomIn();   
+            minimize_btn.ZoomIn();   
+        }
+
+        private void bunifuShapes1_ShapeChanged(object sender, Bunifu.UI.WinForms.BunifuShapes.ShapeChangedEventArgs e)
+        {
+
+
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

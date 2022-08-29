@@ -27,6 +27,10 @@ namespace CProject.AdminPage
         private void AdminPage_Load(object sender, EventArgs e)
         {
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            tbl_doctors.Rows.Add();
+            tbl_doctors.Rows.Add();
+
         }
 
         private void navigationButtons1_Load(object sender, EventArgs e)
@@ -50,14 +54,7 @@ namespace CProject.AdminPage
             lbl_department.ForeColor = Color.DarkGray;
             indicator.Location = new Point(168,92);
 
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Close();
-            }
-             Dashboard  dashboard = new Dashboard();
-            dashboard.MdiParent = this;
-            dashboard.Show();
-            dashboard.Dock = DockStyle.Fill;
+            panel_dashboard.BringToFront();
 
 
 
@@ -71,7 +68,10 @@ namespace CProject.AdminPage
             lbl_receptionist.ForeColor = Color.DarkGray;
             lbl_nurse.ForeColor = Color.DarkGray;
             lbl_department.ForeColor = Color.DarkGray;
+
             indicator.Location = new Point(168, 134);
+            
+            panel_doctors.BringToFront();   
         }
 
         private void lbl_patients_Click(object sender, EventArgs e)
@@ -82,7 +82,10 @@ namespace CProject.AdminPage
             lbl_receptionist.ForeColor = Color.DarkGray;
             lbl_nurse.ForeColor = Color.DarkGray;
             lbl_department.ForeColor = Color.DarkGray;
+
             indicator.Location = new Point(168, 176);
+
+            panel_patients.BringToFront();  
         }
 
         private void lbl_receptionist_Click(object sender, EventArgs e)
@@ -94,7 +97,10 @@ namespace CProject.AdminPage
             lbl_receptionist.ForeColor = Color.Black;
             lbl_nurse.ForeColor = Color.DarkGray;
             lbl_department.ForeColor = Color.DarkGray;
+
             indicator.Location = new Point(168, 218);
+
+            panel_receptionist.BringToFront();
         }
 
         private void lbl_nurse_Click(object sender, EventArgs e)
@@ -106,7 +112,10 @@ namespace CProject.AdminPage
             lbl_receptionist.ForeColor = Color.DarkGray;
             lbl_nurse.ForeColor = Color.Black;
             lbl_department.ForeColor = Color.DarkGray;
+
             indicator.Location = new Point(168, 260);
+
+            panel_nurse.BringToFront();
         }
 
         private void lbl_department_Click(object sender, EventArgs e)
@@ -118,7 +127,10 @@ namespace CProject.AdminPage
             lbl_receptionist.ForeColor = Color.DarkGray;
             lbl_nurse.ForeColor = Color.DarkGray;
             lbl_department.ForeColor = Color.Black;
+
             indicator.Location = new Point(168, 302);
+
+            panel_department.BringToFront();
         }
 
         private void bunifuFormDock1_FormDragging(object sender, Bunifu.UI.WinForms.BunifuFormDock.FormDraggingEventArgs e)
@@ -129,6 +141,22 @@ namespace CProject.AdminPage
         private void bunifuPanel1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox1.ForeColor = SystemColors.ControlText;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
