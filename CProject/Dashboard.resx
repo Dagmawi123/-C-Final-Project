@@ -117,13 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="PatientName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="DateOfAppointment.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="RoomAppointedAt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALAAAABICAYAAABWdn8qAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJgSURBVHhe7d2tTgNBGIXhSiSykktAIvcSkMhKZCWyd4Ds
+        JSCRSCQSiUQikahtOd/ORzablqaUtswJ75NMFmZ/at4MS7dJR8C/tFgsLpbLZaMx0ZgxGDuMaCcaajKr
+        w9GLjBXtddu2D/oZ2Du19aTNjcZZZvd7utipxkwX/9AWOAr1NtdmnBnuRhdodKH37orAkcWiqb/6V5nj
+        z+j8CasuKjHLLLejE+LmGqiGFtPbzHMzHRu3Day8qE68iZCZrqdjxtzzola5sJ5nrqtimS6HAnVSo/eZ
+        65D2xerLrQMcrK7Cmow3kIHqaaGdZ7Y9TcZTEKB6avUtsy00F0/bACf9bUR+MAewMXhCp98vyzTgQQFP
+        M99uBZ7mPOCif7wcv5Q5wAYBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoB
+        wxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoBwxoB
+        wxoBwxoBw9ogYL4nGW76gONbD3MScHGT+XYrcFPmABuTzLcLeFzmAA/x/d6Zb9G27WvuA6qmVj+0Ocl0
+        C03elt1A3dTqfWbb0/x52Q1U7zKzHYqy8wCgSmr0OXNdpf2swqjd+tX3iw7goQaqpNV3nplupgPv8hyg
+        CmrySZvhOw/fiQOJGLXIeE8zz+3pJD7kgz8Vtw3abLfyrqOTG13ksbsacCRq7kWbzf+w/URcLG4rNOIp
+        CHAQ6utBm/5zDoegF4gP/8S7FXGLwWDsY0RTu98qAH5Go0+fQHcfz3ajvwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="bunifuFormDock1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
   </metadata>
 </root>

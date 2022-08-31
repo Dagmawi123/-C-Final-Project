@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_uname
@@ -94,8 +95,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.GhostWhite;
             this.label2.Font = new System.Drawing.Font("Wide Latin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 104);
+            this.label2.Location = new System.Drawing.Point(10, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 78);
             this.label2.TabIndex = 6;
@@ -130,9 +132,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 268);
+            this.panel1.Size = new System.Drawing.Size(226, 287);
             this.panel1.TabIndex = 10;
             // 
             // label3
@@ -149,9 +153,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(599, 265);
+            this.ClientSize = new System.Drawing.Size(599, 287);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cb_see);
@@ -160,11 +163,15 @@
             this.Controls.Add(this.tb_uname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_uname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
             this.Text = "Login Page";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginPage_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

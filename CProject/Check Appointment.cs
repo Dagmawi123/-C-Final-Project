@@ -36,7 +36,7 @@ namespace CProject
                 String ConString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Trusted_Connection=true";
                 SqlConnection s = new SqlConnection(ConString);
                 s.Open();
-                SqlCommand cmd = new SqlCommand("Select Patient,roomNo,DateOf from Doctor_appointment where username=" + name1, s);
+                SqlCommand cmd = new SqlCommand("Select Patient,roomNo,dateOf from Doctor_appointment where username=" + "'"+name1+"'", s);
                 sd = cmd.ExecuteReader();
                 int r = 0;
                 while (sd.Read())
@@ -48,7 +48,9 @@ namespace CProject
                     r++;
                 }
             }
-            catch (SqlException es) { MessageBox.Show("You have no Appointments DOC!"); }
+            catch (SqlException es) { //MessageBox.Show("You have no Appointments DOC!");
+                MessageBox.Show(es.Message);
+            }
             }
     }
 }

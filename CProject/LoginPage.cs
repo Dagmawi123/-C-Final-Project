@@ -13,9 +13,16 @@ namespace CProject
 {
     public partial class LoginPage : Form
     {
-        public LoginPage()
+        public Form2 newForm = null;
+            public LoginPage()
         {
             InitializeComponent();
+        }
+        public LoginPage(Form2 sentForm)
+        {
+            InitializeComponent();
+            newForm = sentForm;
+          //  newForm.Dispose();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -227,33 +234,38 @@ namespace CProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          //  newForm.Dispose();
         }
 
-      /*  private void lbl_add_Click(object sender, EventArgs e)
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
         {
-         try
-            {
-                int x = 0;
-                String query = "exec AddAdmin " + tb_uname.Text + " ," + tb_pwd.Text;
-                String connectionString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Integrated security=true;";
-                SqlConnection cnn = new SqlConnection(connectionString);
-                SqlCommand cmd = new SqlCommand(query, cnn);
-                cnn.Open();
-                x = (int)cmd.ExecuteNonQuery();
-                if (x > 0) { MessageBox.Show("Admin Inserted Sucessfully"); }
-                else { MessageBox.Show("unable to insert Admin"); }
-                cnn.Close();
-            }
-            catch (SqlException s)
-            {
-                MessageBox.Show("ConnectionError");
+            newForm.Dispose();
+        }
+
+        /*  private void lbl_add_Click(object sender, EventArgs e)
+          {
+           try
+              {
+                  int x = 0;
+                  String query = "exec AddAdmin " + tb_uname.Text + " ," + tb_pwd.Text;
+                  String connectionString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Integrated security=true;";
+                  SqlConnection cnn = new SqlConnection(connectionString);
+                  SqlCommand cmd = new SqlCommand(query, cnn);
+                  cnn.Open();
+                  x = (int)cmd.ExecuteNonQuery();
+                  if (x > 0) { MessageBox.Show("Admin Inserted Sucessfully"); }
+                  else { MessageBox.Show("unable to insert Admin"); }
+                  cnn.Close();
+              }
+              catch (SqlException s)
+              {
+                  MessageBox.Show("ConnectionError");
 
 
-            }
-            
-        } 
-    */
+              }
+
+          } 
+      */
     }
     }
     

@@ -33,10 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tb_ptId = new System.Windows.Forms.TextBox();
+            this.tb_mname = new System.Windows.Forms.TextBox();
+            this.tb_Dose = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,27 +82,27 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Dose";
             // 
-            // textBox1
+            // tb_ptId
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.tb_ptId.Location = new System.Drawing.Point(323, 71);
+            this.tb_ptId.Name = "tb_ptId";
+            this.tb_ptId.Size = new System.Drawing.Size(100, 20);
+            this.tb_ptId.TabIndex = 6;
             // 
-            // textBox3
+            // tb_mname
             // 
-            this.textBox3.Location = new System.Drawing.Point(302, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 20);
-            this.textBox3.TabIndex = 8;
+            this.tb_mname.Location = new System.Drawing.Point(302, 112);
+            this.tb_mname.Name = "tb_mname";
+            this.tb_mname.Size = new System.Drawing.Size(186, 20);
+            this.tb_mname.TabIndex = 8;
             // 
-            // textBox4
+            // tb_Dose
             // 
-            this.textBox4.Location = new System.Drawing.Point(290, 156);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 42);
-            this.textBox4.TabIndex = 9;
+            this.tb_Dose.Location = new System.Drawing.Point(290, 156);
+            this.tb_Dose.Multiline = true;
+            this.tb_Dose.Name = "tb_Dose";
+            this.tb_Dose.Size = new System.Drawing.Size(198, 42);
+            this.tb_Dose.TabIndex = 9;
             // 
             // label2
             // 
@@ -113,16 +114,27 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Doc,write your prescription here";
             // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(323, 213);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(165, 23);
+            this.btn_save.TabIndex = 11;
+            this.btn_save.Text = "Save and Give Prescription";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
+            // 
             // WritePrescriptionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(529, 261);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Dose);
+            this.Controls.Add(this.tb_mname);
+            this.Controls.Add(this.tb_ptId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -143,9 +155,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tb_ptId;
+        private System.Windows.Forms.TextBox tb_mname;
+        private System.Windows.Forms.TextBox tb_Dose;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_save;
     }
 }
