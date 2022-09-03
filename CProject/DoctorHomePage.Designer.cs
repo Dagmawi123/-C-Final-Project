@@ -29,111 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHomePage));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.writeAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newPrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inactiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_doc = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_ind = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_trt = new System.Windows.Forms.Button();
+            this.btn_chk = new System.Windows.Forms.Button();
+            this.btn_write = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_wlcm = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.prescriptionToolStripMenuItem,
-            this.optionsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(732, 24);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.writeAppointmentToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-            this.fileToolStripMenuItem.Text = "Appointment";
-            // 
-            // writeAppointmentToolStripMenuItem
-            // 
-            this.writeAppointmentToolStripMenuItem.Name = "writeAppointmentToolStripMenuItem";
-            this.writeAppointmentToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.writeAppointmentToolStripMenuItem.Text = "Check Appointment";
-            this.writeAppointmentToolStripMenuItem.Click += new System.EventHandler(this.writeAppointmentToolStripMenuItem_Click);
-            // 
-            // prescriptionToolStripMenuItem
-            // 
-            this.prescriptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newPrescriptionToolStripMenuItem});
-            this.prescriptionToolStripMenuItem.Name = "prescriptionToolStripMenuItem";
-            this.prescriptionToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.prescriptionToolStripMenuItem.Text = "Prescription";
-            // 
-            // newPrescriptionToolStripMenuItem
-            // 
-            this.newPrescriptionToolStripMenuItem.Name = "newPrescriptionToolStripMenuItem";
-            this.newPrescriptionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newPrescriptionToolStripMenuItem.Text = "New Prescription";
-            this.newPrescriptionToolStripMenuItem.Click += new System.EventHandler(this.newPrescriptionToolStripMenuItem_Click);
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changeStatusToolStripMenuItem,
-            this.addPatientToolStripMenuItem,
-            this.logoutToolStripMenuItem1});
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
-            // 
-            // changeStatusToolStripMenuItem
-            // 
-            this.changeStatusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inactiveToolStripMenuItem,
-            this.activeToolStripMenuItem});
-            this.changeStatusToolStripMenuItem.Name = "changeStatusToolStripMenuItem";
-            this.changeStatusToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.changeStatusToolStripMenuItem.Text = "Change Status";
-            // 
-            // inactiveToolStripMenuItem
-            // 
-            this.inactiveToolStripMenuItem.Name = "inactiveToolStripMenuItem";
-            this.inactiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inactiveToolStripMenuItem.Text = "Inactive";
-            // 
-            // activeToolStripMenuItem
-            // 
-            this.activeToolStripMenuItem.Name = "activeToolStripMenuItem";
-            this.activeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.activeToolStripMenuItem.Text = "Active";
-            // 
-            // addPatientToolStripMenuItem
-            // 
-            this.addPatientToolStripMenuItem.Name = "addPatientToolStripMenuItem";
-            this.addPatientToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.addPatientToolStripMenuItem.Text = "Write Patient Treatment History";
-            this.addPatientToolStripMenuItem.Click += new System.EventHandler(this.addPatientToolStripMenuItem_Click);
-            // 
-            // logoutToolStripMenuItem1
-            // 
-            this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(239, 22);
-            this.logoutToolStripMenuItem1.Text = "Logout";
-            this.logoutToolStripMenuItem1.Click += new System.EventHandler(this.logoutToolStripMenuItem1_Click);
             // 
             // lbl_doc
             // 
@@ -145,26 +54,105 @@
             this.lbl_doc.TabIndex = 27;
             this.lbl_doc.Text = "Doctor";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel1.Controls.Add(this.lbl_ind);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_trt);
+            this.panel1.Controls.Add(this.btn_chk);
+            this.panel1.Controls.Add(this.btn_write);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(155, 400);
+            this.panel1.TabIndex = 32;
+            // 
+            // lbl_ind
+            // 
+            this.lbl_ind.AutoSize = true;
+            this.lbl_ind.BackColor = System.Drawing.Color.Red;
+            this.lbl_ind.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ind.Location = new System.Drawing.Point(12, 78);
+            this.lbl_ind.Name = "lbl_ind";
+            this.lbl_ind.Size = new System.Drawing.Size(19, 13);
+            this.lbl_ind.TabIndex = 5;
+            this.lbl_ind.Text = ">>";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(-3, 356);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(155, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Acivate/Deactivate Staus\r\n";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(48, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Start Page";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btn_trt
+            // 
+            this.btn_trt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_trt.Location = new System.Drawing.Point(29, 260);
+            this.btn_trt.Name = "btn_trt";
+            this.btn_trt.Size = new System.Drawing.Size(113, 43);
+            this.btn_trt.TabIndex = 3;
+            this.btn_trt.Text = "Treatement History";
+            this.btn_trt.UseVisualStyleBackColor = false;
+            this.btn_trt.Click += new System.EventHandler(this.btn_trt_Click);
+            // 
+            // btn_chk
+            // 
+            this.btn_chk.BackColor = System.Drawing.Color.White;
+            this.btn_chk.Location = new System.Drawing.Point(24, 129);
+            this.btn_chk.Name = "btn_chk";
+            this.btn_chk.Size = new System.Drawing.Size(118, 47);
+            this.btn_chk.TabIndex = 1;
+            this.btn_chk.Text = "Check Appointments";
+            this.btn_chk.UseVisualStyleBackColor = false;
+            this.btn_chk.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_write
+            // 
+            this.btn_write.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_write.Location = new System.Drawing.Point(24, 196);
+            this.btn_write.Name = "btn_write";
+            this.btn_write.Size = new System.Drawing.Size(118, 42);
+            this.btn_write.TabIndex = 2;
+            this.btn_write.Text = "Write Prescription";
+            this.btn_write.UseVisualStyleBackColor = false;
+            this.btn_write.Click += new System.EventHandler(this.btn_write_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(153, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(579, 400);
+            this.panel2.TabIndex = 33;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(732, 376);
+            this.pictureBox1.Size = new System.Drawing.Size(576, 397);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbl_wlcm
-            // 
-            this.lbl_wlcm.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_wlcm.Font = new System.Drawing.Font("Script MT Bold", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_wlcm.Location = new System.Drawing.Point(525, 296);
-            this.lbl_wlcm.Name = "lbl_wlcm";
-            this.lbl_wlcm.Size = new System.Drawing.Size(207, 104);
-            this.lbl_wlcm.TabIndex = 30;
-            this.lbl_wlcm.Text = "Welcome Doctor ";
             // 
             // DoctorHomePage
             // 
@@ -172,42 +160,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(732, 400);
-            this.Controls.Add(this.lbl_wlcm);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_doc);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(748, 439);
             this.MinimumSize = new System.Drawing.Size(621, 396);
             this.Name = "DoctorHomePage";
             this.Text = "Home Page";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorHomePage_FormClosed);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prescriptionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changeStatusToolStripMenuItem;
         private System.Windows.Forms.Label lbl_doc;
-        private System.Windows.Forms.ToolStripMenuItem writeAppointmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newPrescriptionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inactiveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addPatientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_ind;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_trt;
+        private System.Windows.Forms.Button btn_chk;
+        private System.Windows.Forms.Button btn_write;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_wlcm;
     }
 
-  
-    }
+
+}

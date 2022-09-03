@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CProject
 {
-    public partial class Dashboard : Form
+     partial class Dashboard : Form
     {
         public Dashboard()
         {

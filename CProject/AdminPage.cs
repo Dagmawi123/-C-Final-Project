@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace CProject
 {
-    public partial class AdminPage : Form
+     partial class AdminPage : Form
     {
+
+        // private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+
         public AdminPage()
         {
             InitializeComponent();
-           
+
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -48,13 +51,13 @@ namespace CProject
             lbl_receptionist.ForeColor = Color.DarkGray;
             lbl_nurse.ForeColor = Color.DarkGray;
             lbl_department.ForeColor = Color.DarkGray;
-            indicator.Location = new Point(168,92);
+            indicator.Location = new Point(168, 92);
 
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Close();
             }
-             Dashboard  dashboard = new Dashboard();
+            Dashboard dashboard = new Dashboard();
             dashboard.MdiParent = this;
             dashboard.Show();
             dashboard.Dock = DockStyle.Fill;
@@ -87,7 +90,7 @@ namespace CProject
 
         private void lbl_receptionist_Click(object sender, EventArgs e)
         {
-            
+
             lbl_dashboard.ForeColor = Color.DarkGray;
             lbl_doctors.ForeColor = Color.DarkGray;
             lbl_patients.ForeColor = Color.DarkGray;
@@ -99,7 +102,7 @@ namespace CProject
 
         private void lbl_nurse_Click(object sender, EventArgs e)
         {
-          
+
             lbl_dashboard.ForeColor = Color.DarkGray;
             lbl_doctors.ForeColor = Color.DarkGray;
             lbl_patients.ForeColor = Color.DarkGray;
@@ -111,7 +114,7 @@ namespace CProject
 
         private void lbl_department_Click(object sender, EventArgs e)
         {
-           
+
             lbl_dashboard.ForeColor = Color.DarkGray;
             lbl_doctors.ForeColor = Color.DarkGray;
             lbl_patients.ForeColor = Color.DarkGray;
@@ -130,5 +133,7 @@ namespace CProject
         {
 
         }
-    }
+
+      
+    } 
 }

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CProject
 {
-    public partial class NavigationButtons : UserControl
+     partial class NavigationButtons : UserControl
     {
         
         public NavigationButtons()
