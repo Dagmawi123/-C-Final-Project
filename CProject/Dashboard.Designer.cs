@@ -1,4 +1,4 @@
-﻿namespace CProject
+﻿namespace CProject.AdminPage
 {
     partial class Dashboard
     {

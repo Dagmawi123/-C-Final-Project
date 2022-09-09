@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CProject
+namespace CProject.AdminPage
 {
-     partial class Dashboard : Form
+    public partial class Dashboard : Form
     {
         public Dashboard()
         {

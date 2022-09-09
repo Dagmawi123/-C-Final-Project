@@ -16,7 +16,7 @@ namespace CProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorHomePage());
+            Application.Run(new LoginPage());
         }
     }
 }
