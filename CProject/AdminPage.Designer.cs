@@ -1,4 +1,4 @@
-﻿namespace CProject.AdminPage
+﻿namespace CProject
 {
     partial class AdminPage
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace CProject.AdminPage
+namespace CProject
 {
     public partial class AdminPage : Form
     {
