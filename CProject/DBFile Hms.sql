@@ -70,6 +70,31 @@ active bit NOT NULL DEFAULT 1,
 CONSTRAINT PK_DOCTOR PRIMARY KEY(doctorId)
 );
 --sp Doc1
+go
+create proc spSearchDoctorById
+@id int
+as
+begin
+select firstName,lastName,mobileNo,gender,age,email,homeAddress,Name,username,password from Doctor 
+join Staff on stId = staffId
+join Department on depId=deptId
+where doctorId=@id
+end
+
+exec spSearchDoctorById 1001
+
+
+go
+create proc spSearchDoctorByName
+@name varchar(50)
+as
+begin
+select firstName,lastName,mobileNo,gender,age,email,homeAddress,Name,username,password from Doctor 
+join Staff on stId = staffId
+join Department on depId=deptId
+where firstName+lastName like '%'+@name+'%'
+end
+
 create proc Add_Doctor
 @depId int,
 @stfId int,
