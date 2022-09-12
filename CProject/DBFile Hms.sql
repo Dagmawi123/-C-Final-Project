@@ -4,7 +4,8 @@ create table Admin(
 username varchar(25),
 password varchar(25)
 );
-alter procedure [AddAdmin]  
+
+alter procedure [spAddAdmin]  
 @username varchar(40),  
 @pwd varchar(40)  
 as begin  
@@ -95,7 +96,9 @@ join Department on depId=deptId
 where firstName+lastName like '%'+@name+'%'
 end
 
-create proc Add_Doctor
+
+drop proc Add_Doctor
+create proc [spAdd_Doctor]
 @depId int,
 @stfId int,
 @uname varchar(30),
@@ -106,21 +109,22 @@ insert into Doctor values(@depId,@stfId,@uname,@pwd,case @active
 when 'true' then 1
 else 0 end)
 end
-
-create proc Edit_Doctor
+drop proc Edit_Doctor
+create proc [spEdit_Doctor]
 @depId int,@stfId int,
 @uname varchar(30),@pwd varchar(30),@active varchar(5),@docId int
 as 
 update Doctor set depId=@depId,staffId=@stfId,userName=@uname,password=@pwd  where doctorId=@docId
 drop proc Edit_Doctor
 
-create Proc Doctor_count
+create Proc [spDoctor_count]
 @x int out
 as 
 select @x=count(*) from Doctor
  
- create proc delete_Doctor
+ create proc [spDelete_Doctor]
  @id int
+ as
  delete from Doctor where  doctorId=@id
 
  alter Proc SearchDoctor
@@ -219,6 +223,15 @@ dose varchar(255) NOT NULL,
 dateof date  NOT NULL DEFAULT GETDATE(),
 given bit NOT NULL DEFAULT 0 
 );
+--sp Prescription 
+create Procedure [spAddPrescription]
+@ptId int,@docId int,@mid int,@dose varchar(max),@date date
+as
+begin
+Insert into Prescription values(@ptID,@docId,@mid,@dose,@date,1)
+end
+drop proc AddPrescription
+
 select *from patient
 select * from doctor
 select * from medicine
@@ -257,6 +270,20 @@ roomNo tinyint foreign key references Room(roomNo),
 dateof date  NOT NULL DEFAULT GETDATE(),
 done bit NOT NULL
 );
+
+--sp1 Appointment
+drop proc sploadAppointment
+create procedure [spLoadAppointment]
+@uname varchar(50) 
+as begin
+Select Patient,roomNo,DateOf from Doctor_appointment where username=@uname
+end
+exec [sploadAppointment] 'sad'
+
+
+
+
+
 INSERT Appointment(ptId,docId,nursId,roomNo,dateof,done) VALUES (1001,1001,1000,18,default,0)
 insert into Admin values('Admin','1234')
 Select * from room
@@ -279,6 +306,7 @@ SELECT appointId,(Patient.firstName +' '+ Patient.lastName) AS Patient,roomNo,da
                      INNER JOIN Staff ON Doctor.staffId=stId
 
 SELECT * From Doctor_Appointment WHERE username='habtsh'
+
 CREATE VIEW Edit_Prescription AS
 SELECT medicineName,dose,prescId FROM Prescription 
 INNER JOIN Medicine ON Prescription.medicineId=Medicine.medicineId
@@ -289,10 +317,10 @@ treatId int identity(1000,1) PRIMARY KEY,
 apId int foreign key references Appointment(appointId) NOT NULL,
 prId int foreign key references Prescription(prescId),
 symptoms text,
-treatmnt text
+treatment text
 )
 
-INSERT INTO Treatment(apId,prId,symptoms,treatmnt) VALUES(1000,1000,'FEVER','Syringe')
+INSERT INTO Treatment(apId,prId,symptoms,treatment) VALUES(1000,1000,'FEVER','Syringe')
 SELECT * FROM Treatment
 
 ALTER VIEW Appointment_Patient AS
