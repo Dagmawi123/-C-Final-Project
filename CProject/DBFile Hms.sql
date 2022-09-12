@@ -311,14 +311,28 @@ CREATE VIEW Edit_Prescription AS
 SELECT medicineName,dose,prescId FROM Prescription 
 INNER JOIN Medicine ON Prescription.medicineId=Medicine.medicineId
 SELECT * FROM Edit_Prescription WHERE prescId=1000
-
+drop table treatment
 CREATE TABLE Treatment(
 treatId int identity(1000,1) PRIMARY KEY,
 apId int foreign key references Appointment(appointId) NOT NULL,
 prId int foreign key references Prescription(prescId),
 symptoms text,
-treatment text
+trtHistory text
 )
+--Proc Treatement
+create proc [spAddTreatment]
+@aId int,@prId int,@sym Text,@trt Text
+as 
+begin
+if(@aId is null and @prId is null )
+insert into Treatment(symptoms,trtHistory) values (@sym,@trt)
+else if(@aid is null)
+insert into Treatment(prId,symptoms,trtHistory) values(@prId,@sym,@trt)
+else if(@prId is null)
+insert into Treatment(apId,symptoms,trtHistory) values(@aId,@sym,@trt)
+else
+insert into Treatment values(@aId,@prId,@sym,@trt)
+end
 
 INSERT INTO Treatment(apId,prId,symptoms,treatment) VALUES(1000,1000,'FEVER','Syringe')
 SELECT * FROM Treatment
