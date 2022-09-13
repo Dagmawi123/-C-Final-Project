@@ -17,10 +17,12 @@ namespace CProject
         public Check_Appointment()
         {
             InitializeComponent();
+            TopLevel = false;
         }
         public Check_Appointment(String name)
         {
             InitializeComponent();
+            TopLevel = false;
             name1 = name;
         }
 
@@ -36,9 +38,16 @@ namespace CProject
                 String ConString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Trusted_Connection=true";
                 SqlConnection s = new SqlConnection(ConString);
                 s.Open();
-                SqlCommand cmd = new SqlCommand("Select Patient,roomNo,dateOf from Doctor_appointment where username=" + "'"+name1+"'", s);
+                SqlCommand cmd = new SqlCommand("[loadAppointment]", s);
+                cmd.CommandType = CommandType.StoredProcedure;
+             //   SqlParameter spar = new SqlParameter();
+                  cmd.Parameters.AddWithValue("@uname",SqlDbType.VarChar).Value=name1;
+                //spar.Direction = ParameterDirection.Input;
+                //spar.Value = name1;
                 sd = cmd.ExecuteReader();
                 int r = 0;
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
                 while (sd.Read())
                 {
                     dataGridView1.Rows.Add(1);
@@ -47,6 +56,8 @@ namespace CProject
                     dataGridView1[2, r].Value = sd["DateOf"].ToString();
                     r++;
                 }
+                s.Close();
+
             }
             catch (SqlException es) { //MessageBox.Show("You have no Appointments DOC!");
                 MessageBox.Show(es.Message);

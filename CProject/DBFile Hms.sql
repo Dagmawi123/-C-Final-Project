@@ -134,6 +134,12 @@ select @x=count(*) from Doctor
  select top 1 @var2=doctorId from Doctor where username like '%'+@var+'%' or cast(doctorId as varchar(5))=@var 
  end
 
+ create proc[spDocIdByName]
+@name varchar(50),
+@id int output
+as  
+Select @id=doctorId from Doctor where username=@name
+
 
  --   if( @n like '%'+@name+'%' or cast(@iq as varchar(5))=@name  or cast(@iq as varchar(5)) like '%'+@name+'%')  
 
@@ -196,6 +202,13 @@ dateAdded date NOT NULL DEFAULT GETDATE(),
 age tinyint NOT NULL,
 gender varchar(6) NOT NULL,
 CONSTRAINT PK_PATIENT PRIMARY KEY(patientID));
+--sp Patient
+create proc [spLoadPatients]
+as 
+select cast(patientId as varchar(10))+'-'+firstName+' '+lastName from Patient
+
+
+
 ALTER TABLE PATIENT ADD disease varchar(50)
 
 INSERT INTO Patient VALUES('John','Smith','0945405147','inpatient','AB-','addis ababa ethiopia',GETDATE(),19,'MALE')
@@ -212,6 +225,15 @@ medicineName varchar(20) NOT NULL,
 medicineCompany varchar(20) ,
 medicineCost money 
 );
+--sp Medicine 
+alter proc [spMedIdByName]
+@medname varchar(50),
+@id int output
+as
+Select @id=MedicineId from Medicine where MedicineName=@medname
+
+
+
 ALTER TABLE MEDICINE ADD CONSTRAINT UQ_MEDICINE_NAME UNIQUE(medicineName)
 INSERT INTO Medicine VALUES('Paracetomol','Julphar','50')
  create table Prescription(
@@ -224,11 +246,12 @@ dateof date  NOT NULL DEFAULT GETDATE(),
 given bit NOT NULL DEFAULT 0 
 );
 --sp Prescription 
-create Procedure [spAddPrescription]
-@ptId int,@docId int,@mid int,@dose varchar(max),@date date
+ALTER Procedure [spAddPrescription]
+@ptId int,@docId int,@mid int,@dose varchar(max)
 as
 begin
-Insert into Prescription values(@ptID,@docId,@mid,@dose,@date,1)
+
+Insert into Prescription values(@ptID,@docId,@mid,@dose,GETDATE(),1)
 end
 drop proc AddPrescription
 
@@ -284,7 +307,7 @@ exec [sploadAppointment] 'sad'
 
 
 
-INSERT Appointment(ptId,docId,nursId,roomNo,dateof,done) VALUES (1001,1001,1000,18,default,0)
+INSERT Appointment(appointId) VALUES (null)
 insert into Admin values('Admin','1234')
 Select * from room
 SELECT * FROM Prescription_Details Where 
@@ -312,27 +335,41 @@ SELECT medicineName,dose,prescId FROM Prescription
 INNER JOIN Medicine ON Prescription.medicineId=Medicine.medicineId
 SELECT * FROM Edit_Prescription WHERE prescId=1000
 drop table treatment
+
 CREATE TABLE Treatment(
 treatId int identity(1000,1) PRIMARY KEY,
-apId int foreign key references Appointment(appointId) NOT NULL,
-prId int foreign key references Prescription(prescId),
+ptId int not null,
+apId int foreign key references Appointment(appointId)  NULL,
+prId int foreign key references Prescription(prescId)  NULL,
 symptoms text,
 trtHistory text
 )
 --Proc Treatement
-create proc [spAddTreatment]
-@aId int,@prId int,@sym Text,@trt Text
+alter proc [spAddTreatment]
+@ptId int,@aId int,@prId int,@sym Text,@trt Text
 as 
 begin
 if(@aId is null and @prId is null )
-insert into Treatment(symptoms,trtHistory) values (@sym,@trt)
+insert into Treatment(ptId,symptoms,trtHistory) values (@ptId,@sym,@trt)
 else if(@aid is null)
-insert into Treatment(prId,symptoms,trtHistory) values(@prId,@sym,@trt)
+insert into Treatment(ptId,prId,symptoms,trtHistory) values(@ptId,@prId,@sym,@trt)
 else if(@prId is null)
-insert into Treatment(apId,symptoms,trtHistory) values(@aId,@sym,@trt)
+insert into Treatment(ptId,apId,symptoms,trtHistory) values(@ptId,@aId,@sym,@trt)
 else
-insert into Treatment values(@aId,@prId,@sym,@trt)
+insert into Treatment values(@ptId,@aId,@prId,@sym,@trt)
 end
+Exec  [spAddTreatment] 1000,null,null,'high fever','x-ray'
+select *from Treatment
+--sp2 Treatment
+create proc [spIdSeparator]
+@name varchar(70),
+@id int out
+as 
+set @id =cast(left(@name,charIndex('-',@name)-1) as Int)
+
+
+print left('Dagm',2)
+
 
 INSERT INTO Treatment(apId,prId,symptoms,treatment) VALUES(1000,1000,'FEVER','Syringe')
 SELECT * FROM Treatment

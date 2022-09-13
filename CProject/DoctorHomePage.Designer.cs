@@ -32,7 +32,7 @@
             this.lbl_doc = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_ind = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_deact = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_trt = new System.Windows.Forms.Button();
             this.btn_chk = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.panel1.Controls.Add(this.lbl_ind);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btn_deact);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_trt);
             this.panel1.Controls.Add(this.btn_chk);
@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 400);
+            this.panel1.Size = new System.Drawing.Size(159, 478);
             this.panel1.TabIndex = 32;
             // 
             // lbl_ind
@@ -80,14 +80,15 @@
             this.lbl_ind.TabIndex = 5;
             this.lbl_ind.Text = ">>";
             // 
-            // button5
+            // btn_deact
             // 
-            this.button5.Location = new System.Drawing.Point(-3, 356);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Acivate/Deactivate Staus\r\n";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_deact.Location = new System.Drawing.Point(0, 421);
+            this.btn_deact.Name = "btn_deact";
+            this.btn_deact.Size = new System.Drawing.Size(162, 23);
+            this.btn_deact.TabIndex = 4;
+            this.btn_deact.Text = "Acivate/Deactivate Staus\r\n";
+            this.btn_deact.UseVisualStyleBackColor = true;
+            this.btn_deact.Click += new System.EventHandler(this.btn_deact_Click);
             // 
             // button1
             // 
@@ -98,11 +99,12 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Start Page";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_trt
             // 
             this.btn_trt.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_trt.Location = new System.Drawing.Point(29, 260);
+            this.btn_trt.Location = new System.Drawing.Point(24, 318);
             this.btn_trt.Name = "btn_trt";
             this.btn_trt.Size = new System.Drawing.Size(113, 43);
             this.btn_trt.TabIndex = 3;
@@ -113,7 +115,7 @@
             // btn_chk
             // 
             this.btn_chk.BackColor = System.Drawing.Color.White;
-            this.btn_chk.Location = new System.Drawing.Point(24, 129);
+            this.btn_chk.Location = new System.Drawing.Point(24, 145);
             this.btn_chk.Name = "btn_chk";
             this.btn_chk.Size = new System.Drawing.Size(118, 47);
             this.btn_chk.TabIndex = 1;
@@ -124,7 +126,7 @@
             // btn_write
             // 
             this.btn_write.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_write.Location = new System.Drawing.Point(24, 196);
+            this.btn_write.Location = new System.Drawing.Point(24, 228);
             this.btn_write.Name = "btn_write";
             this.btn_write.Size = new System.Drawing.Size(118, 42);
             this.btn_write.TabIndex = 2;
@@ -136,9 +138,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(153, 0);
+            this.panel2.Location = new System.Drawing.Point(158, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 400);
+            this.panel2.Size = new System.Drawing.Size(662, 475);
             this.panel2.TabIndex = 33;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -149,7 +151,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(576, 397);
+            this.pictureBox1.Size = new System.Drawing.Size(662, 478);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -159,17 +161,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(732, 400);
+            this.ClientSize = new System.Drawing.Size(821, 478);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_doc);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(748, 439);
             this.MinimumSize = new System.Drawing.Size(621, 396);
             this.Name = "DoctorHomePage";
             this.Text = "Home Page";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorHomePage_FormClosed);
+            this.Load += new System.EventHandler(this.DoctorHomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -182,7 +184,7 @@
         private System.Windows.Forms.Label lbl_doc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_ind;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_deact;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_trt;
         private System.Windows.Forms.Button btn_chk;
