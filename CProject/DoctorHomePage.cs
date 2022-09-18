@@ -14,6 +14,8 @@ namespace CProject
     {
         public LoginPage lo = null;
         public String user;
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHomePage));
+
         public DoctorHomePage()
         {
             InitializeComponent();
@@ -176,6 +178,7 @@ namespace CProject
             panel2.Controls.Clear();
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
 | System.Windows.Forms.AnchorStyles.Right)));
+            // this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 
             //  this.pictureBox1.Image = global::CProject.Properties.Resources.doctor_stethescope;

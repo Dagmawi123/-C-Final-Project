@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace CProject.AdminPage
+namespace CProject
 {
     public partial class AdminPage : Form
     {
@@ -21,6 +21,7 @@ namespace CProject.AdminPage
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -59,7 +60,8 @@ namespace CProject.AdminPage
             dashboard.Show();
             dashboard.Dock = DockStyle.Fill;
 
-
+            
+            
 
         }
 
@@ -127,6 +129,11 @@ namespace CProject.AdminPage
         }
 
         private void bunifuPanel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navigationButtons1_Load_1(object sender, EventArgs e)
         {
 
         }

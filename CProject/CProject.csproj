@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CProject</RootNamespace>
     <AssemblyName>CProject</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,10 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.Licensing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Bunifu.Licensing2">
       <HintPath>..\..\..\..\Downloads\Bunifu.Licensing\Bunifu.Licensing2.dll</HintPath>
     </Reference>
@@ -154,11 +151,8 @@
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage.Designer.cs" />
-    <Compile Include="AdminPage1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AdminPage.resx</DependentUpon>
+    <Compile Include="AdminPage.designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Check Appointment.cs">
       <SubType>Form</SubType>
@@ -169,16 +163,13 @@
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs" />
-    <Compile Include="Dashboard1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dashboard.resx</DependentUpon>
+    <Compile Include="Dashboard.designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DoctorHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoctorHomePage.Designer.cs">
+    <Compile Include="DoctorHomePage.designer.cs">
       <DependentUpon>DoctorHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadingPage.cs">
@@ -196,11 +187,8 @@
     <Compile Include="NavigationButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationButtons.Designer.cs" />
-    <Compile Include="NavigationButtons1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NavigationButtons.resx</DependentUpon>
+    <Compile Include="NavigationButtons.designer.cs">
+      <DependentUpon>NavigationButtons.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,15 +211,13 @@
       <DependentUpon>WritePrescriptionPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminPage.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AdminPage1.Designer.cs</LastGenOutput>
+      <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Check Appointment.resx">
       <DependentUpon>Check Appointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Dashboard1.Designer.cs</LastGenOutput>
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorHomePage.resx">
       <DependentUpon>DoctorHomePage.cs</DependentUpon>
@@ -243,8 +229,7 @@
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavigationButtons.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>NavigationButtons1.Designer.cs</LastGenOutput>
+      <DependentUpon>NavigationButtons.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -255,6 +240,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reception.resx">
       <DependentUpon>Reception.cs</DependentUpon>
@@ -278,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\doctor_stethescope.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

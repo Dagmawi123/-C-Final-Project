@@ -1,4 +1,4 @@
-﻿namespace CProject.AdminPage
+﻿namespace CProject
 {
     partial class AdminPage
     {
@@ -124,6 +124,7 @@
             this.navigationButtons1.Name = "navigationButtons1";
             this.navigationButtons1.Size = new System.Drawing.Size(111, 24);
             this.navigationButtons1.TabIndex = 0;
+            this.navigationButtons1.Load += new System.EventHandler(this.navigationButtons1_Load_1);
             // 
             // side_panel
             // 
