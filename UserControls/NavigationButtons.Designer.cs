@@ -51,7 +51,7 @@
             this.minimize_btn.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.minimize_btn.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.minimize_btn.Image = ((System.Drawing.Image)(resources.GetObject("minimize_btn.Image")));
-            this.minimize_btn.ImageActive = ((System.Drawing.Image)(resources.GetObject("minimize_btn.ImageActive")));
+            this.minimize_btn.ActiveImage = ((System.Drawing.Image)(resources.GetObject("minimize_btn.ImageActive")));
             this.minimize_btn.ImageLocation = null;
             this.minimize_btn.ImageMargin = 0;
             this.minimize_btn.ImageSize = new System.Drawing.Size(19, 19);
