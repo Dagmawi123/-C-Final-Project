@@ -98,7 +98,7 @@
             // 
             this.cb_see.AutoSize = true;
             this.cb_see.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.cb_see.Location = new System.Drawing.Point(203, 224);
+            this.cb_see.Location = new System.Drawing.Point(154, 224);
             this.cb_see.Name = "cb_see";
             this.cb_see.Size = new System.Drawing.Size(47, 17);
             this.cb_see.TabIndex = 8;

@@ -41,198 +41,198 @@ namespace CProject.MainPage
                 tb_pwd.PasswordChar = '@';
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(tb_uname.Text))
-            {
-                errorProvider1.SetError(tb_uname, "PLEASE ENTER YOUR USER NAME!!");
-                errorProvider1.BlinkRate = 2;
-                return;
-            }
-            else if (String.IsNullOrEmpty(tb_pwd.Text))
-            {
-                errorProvider1.SetError(tb_pwd, "PLEASE ENTER YOUR PASSWORD HERE!!");
-                errorProvider1.BlinkRate = 2;
-                return;
-            }
-            else errorProvider1.Clear();
-            // MessageBox.Show(cb_utype.SelectedText);
-            //string connectionString = null;
-            SqlConnection cnn;
-            SqlCommand cmd;
-            string sql = null;
-            SqlDataReader reader;
-            bool t = false;
-            int a = cb_utype.SelectedIndex;
-            //connectionString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Trusted_Connection=true";
+        //private void pictureBox1_Click(object sender, EventArgs e)
+        //{
+        //    if (String.IsNullOrEmpty(tb_uname.Text))
+        //    {
+        //        errorProvider1.SetError(tb_uname, "PLEASE ENTER YOUR USER NAME!!");
+        //        errorProvider1.BlinkRate = 2;
+        //        return;
+        //    }
+        //    else if (String.IsNullOrEmpty(tb_pwd.Text))
+        //    {
+        //        errorProvider1.SetError(tb_pwd, "PLEASE ENTER YOUR PASSWORD HERE!!");
+        //        errorProvider1.BlinkRate = 2;
+        //        return;
+        //    }
+        //    else errorProvider1.Clear();
+        //    // MessageBox.Show(cb_utype.SelectedText);
+        //    //string connectionString = null;
+        //    SqlConnection cnn;
+        //    SqlCommand cmd;
+        //    string sql = null;
+        //    SqlDataReader reader;
+        //    bool t = false;
+        //    int a = cb_utype.SelectedIndex;
+        //    //connectionString = "Server=DESKTOP-44OPTQE\\SQLEXPRESS;Database=HMS;Trusted_Connection=true";
 
-            // if (cb_utype.SelectedItem.ToString().Equals(null))
-            //{
-            //  MessageBox.Show("Please Select system user!!");
-            //}
-            try
-            {
+        //    // if (cb_utype.SelectedItem.ToString().Equals(null))
+        //    //{
+        //    //  MessageBox.Show("Please Select system user!!");
+        //    //}
+        //    try
+        //    {
 
-                if (cb_utype.SelectedItem.ToString().Equals("ADMIN"))
-                {
-                    sql = " Select * from Admin";
-
-
-                    try
-                    {
-                        cnn = new SqlConnection(connectionString);
-                        cnn.Open();
-                        cmd = new SqlCommand(sql, cnn);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        reader = cmd.ExecuteReader();
-                        if (!reader.Read())
-                        {
-                            MessageBox.Show("There is no Admin saved in the database");
-                            return;
-                        }
-                        MessageBox.Show("Connected!");
-                        while (reader.Read())
-                        {
-                            // MessageBox.Show(reader.GetString(0));
-                            if (tb_uname.Text.Equals(reader.GetString(0)))
-                            {
-                                t = true;
-                                if (tb_pwd.Text.Equals(reader.GetString(1).ToString())) { MessageBox.Show("Succesfully logged!!"); }
-                                else
-                                {
-                                    MessageBox.Show("Incorrect Credential");
-                                }
+        //        if (cb_utype.SelectedItem.ToString().Equals("ADMIN"))
+        //        {
+        //            sql = " Select * from Admin";
 
 
-                            }
-
-                        }
-
-                        if (!t)
-                        {
-
-                            MessageBox.Show("Admin " + tb_uname.Text + " does not exist");
-
-                        }
-                        reader.Close();
-                        cmd.Dispose();
-                        cnn.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Can not open connection ! ");
-                    }
-                }
-                else if (cb_utype.SelectedItem.ToString().Equals("RECEPTIONIST"))
-                {
-                    sql = " Select * from Receptionist";
-
-
-                    try
-                    {
-                        cnn = new SqlConnection(connectionString);
-                        cnn.Open();
-                        cmd = new SqlCommand(sql, cnn);
-                        reader = cmd.ExecuteReader();
-                        MessageBox.Show("Connected!");
-                        if (!reader.Read())
-                        {
-                            MessageBox.Show("There is no receptionist saved in the database");
-                            return;
-                        }
-                        while (reader.Read())
-                        {
-                            // MessageBox.Show(reader.GetString(0));
-                            if (tb_uname.Text.Equals(reader.GetString(2)))
-                            {
-                                t = true;
-                                if (tb_pwd.Text.Equals(reader.GetString(3).ToString())) { MessageBox.Show("Succesfully logged!!"); }
-                                else
-                                {
-                                    MessageBox.Show("Incorrect password");
-                                }
+        //            try
+        //            {
+        //                cnn = new SqlConnection(connectionString);
+        //                cnn.Open();
+        //                cmd = new SqlCommand(sql, cnn);
+        //                cmd.CommandType = CommandType.StoredProcedure;
+        //                reader = cmd.ExecuteReader();
+        //                if (!reader.Read())
+        //                {
+        //                    MessageBox.Show("There is no Admin saved in the database");
+        //                    return;
+        //                }
+        //                MessageBox.Show("Connected!");
+        //                while (reader.Read())
+        //                {
+        //                    // MessageBox.Show(reader.GetString(0));
+        //                    if (tb_uname.Text.Equals(reader.GetString(0)))
+        //                    {
+        //                        t = true;
+        //                        if (tb_pwd.Text.Equals(reader.GetString(1).ToString())) { MessageBox.Show("Succesfully logged!!"); }
+        //                        else
+        //                        {
+        //                            MessageBox.Show("Incorrect Credential");
+        //                        }
 
 
-                            }
+        //                    }
 
-                        }
+        //                }
 
-                        if (!t)
-                        {
+        //                if (!t)
+        //                {
 
-                            MessageBox.Show("Receptionist " + tb_uname.Text + " does not exist");
+        //                    MessageBox.Show("Admin " + tb_uname.Text + " does not exist");
 
-                        }
-                        reader.Close();
-                        cmd.Dispose();
-                        cnn.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("could not open connection ! ");
-                    }
-                }
-                else if (cb_utype.SelectedItem.ToString().Equals("DOCTOR"))
-                {
-                    sql = " Select * from Doctor";
-
-
-                    try
-                    {
-                        cnn = new SqlConnection(connectionString);
-                        cnn.Open();
-                        cmd = new SqlCommand(sql, cnn);
-                        reader = cmd.ExecuteReader();
-                        MessageBox.Show("Connected!");
-                        while (reader.Read())
-                        {
-                            // MessageBox.Show(reader.GetString(0));
-                            if (tb_uname.Text.Equals(reader.GetString(3)))
-                            {
-                                t = true;
-                                if (tb_pwd.Text.Equals(reader.GetString(4).ToString()))
-                                {
-                                    MessageBox.Show("Succesfully logged!!");
-                                    this.Hide();
-                                    //Form f = LoginPage.ActiveForm;
-                                    MainPage.DoctorPage d = new MainPage.DoctorPage(tb_uname.Text, this);
-                                    d.Show();
-                                    //f.Close();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Incorrect password");
-                                }
+        //                }
+        //                reader.Close();
+        //                cmd.Dispose();
+        //                cnn.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("Can not open connection ! ");
+        //            }
+        //        }
+        //        else if (cb_utype.SelectedItem.ToString().Equals("RECEPTIONIST"))
+        //        {
+        //            sql = " Select * from Receptionist";
 
 
-                            }
-
-                        }
-
-                        if (!t)
-                        {
-
-                            MessageBox.Show("Doctor " + tb_uname.Text + " does not exist");
-
-                        }
-                        reader.Close();
-                        cmd.Dispose();
-                        cnn.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Can not open connection ! ");
-                    }
-                }
-            }
-            catch (Exception ewq)
-            {
-                MessageBox.Show("Please Select appropriate user type");
-            }
-
+        //            try
+        //            {
+        //                cnn = new SqlConnection(connectionString);
+        //                cnn.Open();
+        //                cmd = new SqlCommand(sql, cnn);
+        //                reader = cmd.ExecuteReader();
+        //                MessageBox.Show("Connected!");
+        //                if (!reader.Read())
+        //                {
+        //                    MessageBox.Show("There is no receptionist saved in the database");
+        //                    return;
+        //                }
+        //                while (reader.Read())
+        //                {
+        //                    // MessageBox.Show(reader.GetString(0));
+        //                    if (tb_uname.Text.Equals(reader.GetString(2)))
+        //                    {
+        //                        t = true;
+        //                        if (tb_pwd.Text.Equals(reader.GetString(3).ToString())) { MessageBox.Show("Succesfully logged!!"); }
+        //                        else
+        //                        {
+        //                            MessageBox.Show("Incorrect password");
+        //                        }
 
 
-        }
+        //                    }
+
+        //                }
+
+        //                if (!t)
+        //                {
+
+        //                    MessageBox.Show("Receptionist " + tb_uname.Text + " does not exist");
+
+        //                }
+        //                reader.Close();
+        //                cmd.Dispose();
+        //                cnn.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("could not open connection ! ");
+        //            }
+        //        }
+        //        else if (cb_utype.SelectedItem.ToString().Equals("DOCTOR"))
+        //        {
+        //            sql = " Select * from Doctor";
+
+
+        //            try
+        //            {
+        //                cnn = new SqlConnection(connectionString);
+        //                cnn.Open();
+        //                cmd = new SqlCommand(sql, cnn);
+        //                reader = cmd.ExecuteReader();
+        //                MessageBox.Show("Connected!");
+        //                while (reader.Read())
+        //                {
+        //                    // MessageBox.Show(reader.GetString(0));
+        //                    if (tb_uname.Text.Equals(reader.GetString(3)))
+        //                    {
+        //                        t = true;
+        //                        if (tb_pwd.Text.Equals(reader.GetString(4).ToString()))
+        //                        {
+        //                            MessageBox.Show("Succesfully logged!!");
+        //                            this.Hide();
+        //                            //Form f = LoginPage.ActiveForm;
+        //                            MainPage.DoctorPage d = new MainPage.DoctorPage(tb_uname.Text, this);
+        //                            d.Show();
+        //                            //f.Close();
+        //                        }
+        //                        else
+        //                        {
+        //                            MessageBox.Show("Incorrect password");
+        //                        }
+
+
+        //                    }
+
+        //                }
+
+        //                if (!t)
+        //                {
+
+        //                    MessageBox.Show("Doctor " + tb_uname.Text + " does not exist");
+
+        //                }
+        //                reader.Close();
+        //                cmd.Dispose();
+        //                cnn.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("Can not open connection ! ");
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ewq)
+        //    {
+        //        MessageBox.Show("Please Select appropriate user type");
+        //    }
+
+
+
+        //}
 
         private void cb_utype_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -268,7 +268,7 @@ namespace CProject.MainPage
             //string connectionString = null;
             SqlConnection cnn;
             SqlCommand cmd;
-            string sql = null;
+            //string sql = null;
             SqlDataReader reader;
             bool t = false;
             int a = cb_utype.SelectedIndex;
@@ -282,7 +282,7 @@ namespace CProject.MainPage
 
                 if (cb_utype.SelectedItem.ToString().Equals("ADMIN"))
                 {
-                    sql = " Select * from Admin";
+                    //sql = " Select * from Admin";
 
 
                     try
@@ -336,7 +336,7 @@ namespace CProject.MainPage
                 }
                 else if (cb_utype.SelectedItem.ToString().Equals("RECEPTIONIST"))
                 {
-                    sql = " Select * from Receptionist";
+                  //  sql = " Select * from Receptionist";
 
 
                     try
@@ -390,7 +390,7 @@ namespace CProject.MainPage
                 }
                 else if (cb_utype.SelectedItem.ToString().Equals("DOCTOR"))
                 {
-                    sql = " Select * from Doctor";
+                   String sql = " Select * from Doctor";
 
 
                     try
