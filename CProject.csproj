@@ -35,11 +35,11 @@
   <ItemGroup>
     <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <HintPath>..\..\..\.nuget\packages\bunifu.ui.winforms\5.0.7\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>..\DLLs\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -203,12 +203,6 @@
     <Compile Include="MainPage\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage\ReceptionistPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainPage\ReceptionistPage.Designer.cs">
-      <DependentUpon>ReceptionistPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\NavigationButtons.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainPage\ReceptionistPage.resx">
-      <DependentUpon>ReceptionistPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\NavigationButtons.resx">
       <DependentUpon>NavigationButtons.cs</DependentUpon>
@@ -279,7 +270,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="..\DLLs\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Icons\delete.png" />
     <Content Include="Icons\details.png" />

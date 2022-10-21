@@ -33,7 +33,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.top_panel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.navigationButtons1 = new CProject.NavigationButtons();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.side_panel = new Bunifu.UI.WinForms.BunifuPanel();
             this.indicator = new System.Windows.Forms.Panel();
@@ -109,22 +108,14 @@
             this.top_panel.BorderColor = System.Drawing.Color.Transparent;
             this.top_panel.BorderRadius = 30;
             this.top_panel.BorderThickness = 10;
-            this.top_panel.Controls.Add(this.navigationButtons1);
             this.top_panel.Controls.Add(this.bunifuImageButton1);
             this.top_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.top_panel.Location = new System.Drawing.Point(0, 0);
+            this.top_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.top_panel.Name = "top_panel";
             this.top_panel.ShowBorders = true;
-            this.top_panel.Size = new System.Drawing.Size(788, 57);
+            this.top_panel.Size = new System.Drawing.Size(1051, 70);
             this.top_panel.TabIndex = 2;
-            // 
-            // navigationButtons1
-            // 
-            this.navigationButtons1.BackColor = System.Drawing.Color.Transparent;
-            this.navigationButtons1.Location = new System.Drawing.Point(660, 18);
-            this.navigationButtons1.Name = "navigationButtons1";
-            this.navigationButtons1.Size = new System.Drawing.Size(107, 27);
-            this.navigationButtons1.TabIndex = 1;
             // 
             // bunifuImageButton1
             // 
@@ -143,17 +134,18 @@
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.ImageLocation = null;
             this.bunifuImageButton1.ImageMargin = 10;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(55, 37);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(65, 47);
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(77, 48);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(87, 58);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(0, 4);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(0, 5);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;
             this.bunifuImageButton1.ShowCursorChanges = true;
             this.bunifuImageButton1.ShowImageBorders = false;
             this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(65, 47);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(87, 58);
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.ToolTipText = "";
             this.bunifuImageButton1.WaitOnLoad = false;
@@ -175,18 +167,20 @@
             this.side_panel.Controls.Add(this.lbl_appointments);
             this.side_panel.Controls.Add(this.lbl_dashboard);
             this.side_panel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.side_panel.Location = new System.Drawing.Point(0, 57);
+            this.side_panel.Location = new System.Drawing.Point(0, 70);
+            this.side_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.side_panel.Name = "side_panel";
             this.side_panel.ShowBorders = true;
-            this.side_panel.Size = new System.Drawing.Size(196, 441);
+            this.side_panel.Size = new System.Drawing.Size(261, 543);
             this.side_panel.TabIndex = 3;
             // 
             // indicator
             // 
             this.indicator.BackColor = System.Drawing.Color.SteelBlue;
-            this.indicator.Location = new System.Drawing.Point(159, 185);
+            this.indicator.Location = new System.Drawing.Point(212, 228);
+            this.indicator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.indicator.Name = "indicator";
-            this.indicator.Size = new System.Drawing.Size(3, 36);
+            this.indicator.Size = new System.Drawing.Size(4, 44);
             this.indicator.TabIndex = 4;
             // 
             // lbl_treatment
@@ -197,10 +191,11 @@
             this.lbl_treatment.CursorType = null;
             this.lbl_treatment.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_treatment.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_treatment.Location = new System.Drawing.Point(10, 311);
+            this.lbl_treatment.Location = new System.Drawing.Point(13, 383);
+            this.lbl_treatment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_treatment.Name = "lbl_treatment";
             this.lbl_treatment.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_treatment.Size = new System.Drawing.Size(180, 36);
+            this.lbl_treatment.Size = new System.Drawing.Size(240, 44);
             this.lbl_treatment.TabIndex = 5;
             this.lbl_treatment.Text = "Treatment History";
             this.lbl_treatment.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,10 +210,11 @@
             this.lbl_prescriptions.CursorType = null;
             this.lbl_prescriptions.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_prescriptions.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_prescriptions.Location = new System.Drawing.Point(10, 269);
+            this.lbl_prescriptions.Location = new System.Drawing.Point(13, 331);
+            this.lbl_prescriptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_prescriptions.Name = "lbl_prescriptions";
             this.lbl_prescriptions.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_prescriptions.Size = new System.Drawing.Size(180, 36);
+            this.lbl_prescriptions.Size = new System.Drawing.Size(240, 44);
             this.lbl_prescriptions.TabIndex = 2;
             this.lbl_prescriptions.Text = "Prescriptions";
             this.lbl_prescriptions.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,10 +229,11 @@
             this.lbl_appointments.CursorType = null;
             this.lbl_appointments.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_appointments.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_appointments.Location = new System.Drawing.Point(12, 227);
+            this.lbl_appointments.Location = new System.Drawing.Point(16, 279);
+            this.lbl_appointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_appointments.Name = "lbl_appointments";
             this.lbl_appointments.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_appointments.Size = new System.Drawing.Size(180, 36);
+            this.lbl_appointments.Size = new System.Drawing.Size(240, 44);
             this.lbl_appointments.TabIndex = 1;
             this.lbl_appointments.Text = "Appointments";
             this.lbl_appointments.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,10 +248,11 @@
             this.lbl_dashboard.CursorType = null;
             this.lbl_dashboard.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_dashboard.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbl_dashboard.Location = new System.Drawing.Point(10, 185);
+            this.lbl_dashboard.Location = new System.Drawing.Point(13, 228);
+            this.lbl_dashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbl_dashboard.Name = "lbl_dashboard";
             this.lbl_dashboard.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_dashboard.Size = new System.Drawing.Size(180, 36);
+            this.lbl_dashboard.Size = new System.Drawing.Size(240, 44);
             this.lbl_dashboard.TabIndex = 0;
             this.lbl_dashboard.Text = "Dashboard";
             this.lbl_dashboard.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,17 +276,18 @@
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.ImageLocation = null;
             this.bunifuImageButton2.ImageMargin = 5;
-            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(55, 28);
-            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(60, 33);
+            this.bunifuImageButton2.ImageSize = new System.Drawing.Size(75, 36);
+            this.bunifuImageButton2.ImageZoomSize = new System.Drawing.Size(80, 41);
             this.bunifuImageButton2.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.InitialImage")));
-            this.bunifuImageButton2.Location = new System.Drawing.Point(532, 408);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(709, 502);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Rotation = 0;
             this.bunifuImageButton2.ShowActiveImage = true;
             this.bunifuImageButton2.ShowCursorChanges = true;
             this.bunifuImageButton2.ShowImageBorders = false;
             this.bunifuImageButton2.ShowSizeMarkers = false;
-            this.bunifuImageButton2.Size = new System.Drawing.Size(60, 33);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(80, 41);
             this.bunifuImageButton2.TabIndex = 6;
             this.bunifuImageButton2.ToolTipText = "LogOut Here";
             this.bunifuImageButton2.WaitOnLoad = false;
@@ -299,9 +298,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(196, 57);
+            this.panel2.Location = new System.Drawing.Point(261, 70);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 438);
+            this.panel2.Size = new System.Drawing.Size(788, 539);
             this.panel2.TabIndex = 10;
             // 
             // panel1
@@ -311,8 +311,9 @@
             this.panel1.Controls.Add(this.btn_deact);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 438);
+            this.panel1.Size = new System.Drawing.Size(789, 539);
             this.panel1.TabIndex = 0;
             // 
             // lbl_dea
@@ -320,9 +321,10 @@
             this.lbl_dea.AutoSize = true;
             this.lbl_dea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_dea.ForeColor = System.Drawing.Color.Red;
-            this.lbl_dea.Location = new System.Drawing.Point(3, 418);
+            this.lbl_dea.Location = new System.Drawing.Point(4, 514);
+            this.lbl_dea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_dea.Name = "lbl_dea";
-            this.lbl_dea.Size = new System.Drawing.Size(238, 20);
+            this.lbl_dea.Size = new System.Drawing.Size(292, 25);
             this.lbl_dea.TabIndex = 2;
             this.lbl_dea.Text = "You are not active in the system.";
             // 
@@ -335,14 +337,15 @@
             this.btn_deact.BorderThickness = 1;
             this.btn_deact.Checked = true;
             this.btn_deact.ForeColor = System.Drawing.Color.Lime;
-            this.btn_deact.Location = new System.Drawing.Point(0, 326);
+            this.btn_deact.Location = new System.Drawing.Point(0, 401);
+            this.btn_deact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_deact.Name = "btn_deact";
             this.btn_deact.OutlineColor = System.Drawing.Color.Gray;
             this.btn_deact.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_deact.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
             this.btn_deact.RadioColor = System.Drawing.Color.Red;
             this.btn_deact.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_deact.Size = new System.Drawing.Size(34, 34);
+            this.btn_deact.Size = new System.Drawing.Size(45, 45);
             this.btn_deact.TabIndex = 1;
             this.btn_deact.Text = null;
             this.btn_deact.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.bunifuRadioButton1_CheckedChanged2);
@@ -353,8 +356,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(592, 324);
+            this.pictureBox1.Size = new System.Drawing.Size(789, 399);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -366,16 +370,17 @@
             // 
             // DoctorPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(788, 498);
+            this.ClientSize = new System.Drawing.Size(1051, 613);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.side_panel);
             this.Controls.Add(this.top_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DoctorPage";
             this.Text = "AdminPage";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DoctorPage_KeyDown);
@@ -408,7 +413,7 @@
         private Bunifu.UI.WinForms.BunifuRadioButton btn_deact;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_dea;
-        private NavigationButtons navigationButtons1;
+       // private NavigationButtons navigationButtons1;
         //  private NavigationButtons navigationButtons2;
     }
 }

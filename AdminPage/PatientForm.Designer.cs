@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -76,6 +77,7 @@
             this.lbl_header = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_firstname = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +122,7 @@
             // 
             this.combo_blood.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_blood.FormattingEnabled = true;
-            this.combo_blood.ItemHeight = 21;
+            this.combo_blood.ItemHeight = 28;
             this.combo_blood.Items.AddRange(new object[] {
             "A+",
             "A-",
@@ -132,20 +134,20 @@
             "O+"});
             this.combo_blood.Location = new System.Drawing.Point(35, 451);
             this.combo_blood.Name = "combo_blood";
-            this.combo_blood.Size = new System.Drawing.Size(260, 29);
+            this.combo_blood.Size = new System.Drawing.Size(260, 36);
             this.combo_blood.TabIndex = 26;
             // 
             // combo_gender
             // 
             this.combo_gender.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_gender.FormattingEnabled = true;
-            this.combo_gender.ItemHeight = 21;
+            this.combo_gender.ItemHeight = 28;
             this.combo_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.combo_gender.Location = new System.Drawing.Point(35, 309);
             this.combo_gender.Name = "combo_gender";
-            this.combo_gender.Size = new System.Drawing.Size(260, 29);
+            this.combo_gender.Size = new System.Drawing.Size(260, 36);
             this.combo_gender.TabIndex = 25;
             // 
             // bunifuSeparator1
@@ -352,7 +354,7 @@
             this.bunifuLabel10.Location = new System.Drawing.Point(35, 425);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(79, 20);
+            this.bunifuLabel10.Size = new System.Drawing.Size(101, 26);
             this.bunifuLabel10.TabIndex = 17;
             this.bunifuLabel10.Text = "Blood Type";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -367,7 +369,7 @@
             this.bunifuLabel11.Location = new System.Drawing.Point(35, 486);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(53, 20);
+            this.bunifuLabel11.Size = new System.Drawing.Size(65, 26);
             this.bunifuLabel11.TabIndex = 15;
             this.bunifuLabel11.Text = "Disease";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -436,7 +438,7 @@
             this.txt_disease.SelectionLength = 0;
             this.txt_disease.SelectionStart = 0;
             this.txt_disease.ShortcutsEnabled = true;
-            this.txt_disease.Size = new System.Drawing.Size(260, 38);
+            this.txt_disease.Size = new System.Drawing.Size(260, 42);
             this.txt_disease.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_disease.TabIndex = 14;
             this.txt_disease.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -456,7 +458,7 @@
             this.bunifuLabel7.Location = new System.Drawing.Point(35, 570);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(57, 20);
+            this.bunifuLabel7.Size = new System.Drawing.Size(71, 26);
             this.bunifuLabel7.TabIndex = 13;
             this.bunifuLabel7.Text = "Address";
             this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -525,7 +527,7 @@
             this.txt_address.SelectionLength = 0;
             this.txt_address.SelectionStart = 0;
             this.txt_address.ShortcutsEnabled = true;
-            this.txt_address.Size = new System.Drawing.Size(260, 38);
+            this.txt_address.Size = new System.Drawing.Size(260, 42);
             this.txt_address.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_address.TabIndex = 12;
             this.txt_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -545,7 +547,7 @@
             this.bunifuLabel6.Location = new System.Drawing.Point(35, 353);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(28, 20);
+            this.bunifuLabel6.Size = new System.Drawing.Size(35, 26);
             this.bunifuLabel6.TabIndex = 11;
             this.bunifuLabel6.Text = "Age";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -614,7 +616,7 @@
             this.txt_age.SelectionLength = 0;
             this.txt_age.SelectionStart = 0;
             this.txt_age.ShortcutsEnabled = true;
-            this.txt_age.Size = new System.Drawing.Size(260, 38);
+            this.txt_age.Size = new System.Drawing.Size(260, 42);
             this.txt_age.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_age.TabIndex = 10;
             this.txt_age.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -634,7 +636,7 @@
             this.bunifuLabel5.Location = new System.Drawing.Point(35, 283);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(51, 20);
+            this.bunifuLabel5.Size = new System.Drawing.Size(65, 26);
             this.bunifuLabel5.TabIndex = 9;
             this.bunifuLabel5.Text = "Gender";
             this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -649,7 +651,7 @@
             this.bunifuLabel4.Location = new System.Drawing.Point(35, 213);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(44, 20);
+            this.bunifuLabel4.Size = new System.Drawing.Size(56, 26);
             this.bunifuLabel4.TabIndex = 7;
             this.bunifuLabel4.Text = "Phone";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -718,7 +720,7 @@
             this.txt_phone.SelectionLength = 0;
             this.txt_phone.SelectionStart = 0;
             this.txt_phone.ShortcutsEnabled = true;
-            this.txt_phone.Size = new System.Drawing.Size(260, 38);
+            this.txt_phone.Size = new System.Drawing.Size(260, 42);
             this.txt_phone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_phone.TabIndex = 6;
             this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -739,7 +741,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(35, 143);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(75, 20);
+            this.bunifuLabel3.Size = new System.Drawing.Size(92, 26);
             this.bunifuLabel3.TabIndex = 5;
             this.bunifuLabel3.Text = "Last Name";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -808,7 +810,7 @@
             this.txt_lastname.SelectionLength = 0;
             this.txt_lastname.SelectionStart = 0;
             this.txt_lastname.ShortcutsEnabled = true;
-            this.txt_lastname.Size = new System.Drawing.Size(260, 38);
+            this.txt_lastname.Size = new System.Drawing.Size(260, 42);
             this.txt_lastname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_lastname.TabIndex = 4;
             this.txt_lastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -828,7 +830,7 @@
             this.lbl_header.Location = new System.Drawing.Point(115, 36);
             this.lbl_header.Name = "lbl_header";
             this.lbl_header.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_header.Size = new System.Drawing.Size(112, 21);
+            this.lbl_header.Size = new System.Drawing.Size(140, 27);
             this.lbl_header.TabIndex = 3;
             this.lbl_header.Text = "Patient Details";
             this.lbl_header.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -845,7 +847,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(35, 78);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(77, 20);
+            this.bunifuLabel1.Size = new System.Drawing.Size(95, 26);
             this.bunifuLabel1.TabIndex = 2;
             this.bunifuLabel1.Text = "First Name";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -914,7 +916,7 @@
             this.txt_firstname.SelectionLength = 0;
             this.txt_firstname.SelectionStart = 0;
             this.txt_firstname.ShortcutsEnabled = true;
-            this.txt_firstname.Size = new System.Drawing.Size(260, 38);
+            this.txt_firstname.Size = new System.Drawing.Size(260, 42);
             this.txt_firstname.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_firstname.TabIndex = 0;
             this.txt_firstname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -925,16 +927,21 @@
             this.txt_firstname.UseSystemPasswordChar = false;
             this.txt_firstname.WordWrap = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // PatientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(343, 483);
+            this.ClientSize = new System.Drawing.Size(322, 483);
             this.Controls.Add(this.bunifuPanel2);
             this.Font = new System.Drawing.Font("Ebrima", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "PatientForm";
             this.Text = "PatientForm";
@@ -968,5 +975,6 @@
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.ComboBox combo_gender;
         private System.Windows.Forms.ComboBox combo_blood;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
