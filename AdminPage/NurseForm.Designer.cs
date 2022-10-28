@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NurseForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -74,7 +75,9 @@
             this.lbl_header = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_firstname = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.bunifuPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel2
@@ -114,6 +117,7 @@
             // 
             // combo_gender
             // 
+            this.combo_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combo_gender.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_gender.FormattingEnabled = true;
             this.combo_gender.ItemHeight = 21;
@@ -887,6 +891,10 @@
             this.txt_firstname.UseSystemPasswordChar = false;
             this.txt_firstname.WordWrap = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // NurseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -903,6 +911,7 @@
             this.Load += new System.EventHandler(this.NurseForm_Load);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -928,5 +937,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.ComboBox combo_gender;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
